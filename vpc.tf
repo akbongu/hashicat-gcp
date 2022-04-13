@@ -1,6 +1,8 @@
 module "network" {
   source  = "app.terraform.io/arunbongu-training/network/google"
   version = "3.4.0"
+  network_name = "akbongu-network"
+  project_id = var.project
   subnets = [
   {
     subnet_name   = "akbongu-subnet"
@@ -9,7 +11,3 @@ module "network" {
   }
 ]
 }
-   
-
-
-
